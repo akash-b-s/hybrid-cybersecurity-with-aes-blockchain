@@ -1,0 +1,42 @@
+Step-By-Step Instructions
+=========================
+- How to run the blockchain demo
+ 
+1. Start two MATLAB instances
+2. In both navigate to the demo folder and invoke runapp.m
+   Both should now show the MATLAB Blockchain GUI
+   Note that all outputs will be in the MATLAB command window
+3. Press start button in both apps
+4. In one of the apps press Add Client and wait until you get
+   an error (*** Node not replying). This is ok.
+5. In the other app switch the remote and local port numbers
+   That means typing 8844 in the Remote port edit box and
+   8866 in the Local port box. Then press Add Client button
+   in the same app.
+ 
+The two nodes should now be aware of each other and exchange
+any changes to its blockchain.
+ 
+6. In one of the apps type something in the Data edit box
+   and press Mine Block. Wait until it is done.
+7. Press Print Blockchain in the other app, the new block
+   should now be replicated here.
+ 
+The app will output '.' in the command window when the app is 
+online and running. When mining 'x' are also added to the output.
+ 
+If you try to add a block that isn't mined and thus has a hash
+without proof-of-work (no zeros in the beginning), you can see that
+the other node, or app, is rejecting it. If the other now mines
+a new block now it will be rejected by the one with the with
+a block with incorrect hash as the new chain is shorter. If you
+now mine another block in the app without the faulty block,
+that chain will be longer and replace the chain with the
+faulty block (they reach consensus).
+ 
+You can add more clients but you need to use the same procedure
+as above were all other clients need to try to connect with
+proper remote and local port numbers, and timeout. Then start
+the new client and add all other clients with remote
+and local port set. Note that you don't need to connect all 
+other nodes. The network can be random.

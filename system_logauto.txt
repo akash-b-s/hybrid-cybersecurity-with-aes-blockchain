@@ -1,0 +1,8 @@
+Number of Words: 2
+AES Encryption Strength: 128-bit
+Private Key: 997
+Public Key: 973
+Node Keys: 1000  1003  1006     0     3
+Encryption Time: 0.0128 sec
+Decryption Time: 0.0128 sec
+Throughput: 39.06 ops/sec
